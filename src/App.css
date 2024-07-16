@@ -1,0 +1,19 @@
+.img{
+  width: 8rem;
+  height: 7rem;
+  border-radius: .5rem;
+}
+.card:hover{
+  box-shadow: .3rem .4rem .5rem black;
+  transition: .5s;
+
+}
+
+.search{
+  text-align: center;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  border-color: green;
+}
