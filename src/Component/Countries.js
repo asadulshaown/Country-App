@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Countries = (props) => {  
-  
+  //accept props
   return (
     <>
       

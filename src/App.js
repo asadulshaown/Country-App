@@ -15,8 +15,10 @@ function App() {
   const[error,setError]=useState(null)
   const[countries,setCountries]=useState([])
 
+  //countries api 
   const url="https://restcountries.com/v3.1/all"
 
+  //fetching data from countries api
   const fetchData=async (url)=>{
   setIsLoading(true)
   try{    
@@ -34,19 +36,21 @@ function App() {
 }
 useEffect(()=>{
  
+  //setTimeout() for fetching data properly  after some time interval
   setTimeout(()=>{
     fetchData(url)
   },3000)
  
 },[])
 
-  const country=countries && countries.map((data)=><Countries name={data.name.common} key={uuidv4()} img={data.flags.png} people={data.population.toString() } region={data.region
+//data maping from countries useState()
+ const country=countries && countries.map((data)=><Countries name={data.name.common} key={uuidv4()} img={data.flags.png} people={data.population.toString() } region={data.region
    } area={data.area} />  )
    
-
+// handle searching data 
    const handleSearch = (searchValue) => {
     let value = searchValue.toLowerCase();
-    const newCountries = countries.filter((country) => {
+      const newCountries = countries.filter((country) => {
       const countryName = country.name.common.toLowerCase();
       return countryName.startsWith(value);
     });
@@ -64,6 +68,7 @@ useEffect(()=>{
       
        <div className='row mt-5 p-2'>
         {
+          // return country from countries 
           country 
         }
        </div>
