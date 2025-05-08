@@ -11,8 +11,6 @@ const Search = (props) => {
       
         setSearchText(e.target.value)        
     }
-const input = document.querySelector('input')
-console.log(input.value);
 
     useEffect(()=>{     
       onSearch(searchText) 
@@ -20,7 +18,7 @@ console.log(input.value);
 
   return (
     <div>
-        <input type='text' placeholder='Search Country' className='search ' onChange={handelChange} value={searchText}/>
+        <input type='text' placeholder='Search Country' className='search ' onChange={handelChange} />
         
 
     </div>
