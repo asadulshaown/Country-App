@@ -6,12 +6,10 @@ const Count = (props) => {
     <div className='mt-2 p-2 '>
             <div className='d-flex justify-content-center'>
             <h5>
-                Amount Of Search Country:
+                Amount Of Search Country{countCountries}
             </h5>
             
-            <h4>
-            {countCountries}
-            </h4>
+            
             </div>
       
     </div>

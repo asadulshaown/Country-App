@@ -50,8 +50,8 @@ useEffect(()=>{
 // handle searching data 
    const handleSearch = (searchValue) => {
     let value = searchValue.toLowerCase();
-      const newCountries = countries.filter((country) => {
-      const countryName = country.name.common.toLowerCase();
+      let newCountries = countries.filter((country) => {
+      let countryName = country.name.common.toLowerCase();
       return countryName.startsWith(value);
     });
     setCountries(newCountries);
